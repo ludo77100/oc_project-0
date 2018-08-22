@@ -53,9 +53,9 @@ public class Product {
 
 	public void setQuantity(int quantity) {
 	    if (quantity < 0) //quantity doesn't be negative, so this condition make it to 0 if negative
-	        this.quantity = 0;
+			{this.quantity = 0;}
 	    else
-			this.quantity = quantity;
+			{this.quantity = quantity;}
 	}
 
 	public double getPrice() {
@@ -64,11 +64,11 @@ public class Product {
 
 	public void setPrice(double price) {
 		if (price < 0) //price cannot be negative or much higher than 1000
-			this.price = 0; //for negative, this.price take 0
+			{this.price = 0;} //for negative, this.price take 0
 		else if (price > 1000)
-			this.price = 1000; //for higher than 1000, this.price take 1000
+			{this.price = 1000;} //for higher than 1000, this.price take 1000
 		else
-			this.price = price; //and if it's between 0 <> 1000, no adjustement
+			{this.price = price;} //and if it's between 0 <> 1000, no adjustement
 	}
 
 	public double getInventoryPrice() {
