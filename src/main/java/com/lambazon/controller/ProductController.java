@@ -31,8 +31,11 @@ public class ProductController {
 	}
 	
 	private double calculateTotalInventoryAmount() {
-		// TODO fix calculation
-		 return 123456.78;
-		
-	}
+		double totalInventoryAmount = 0.0 ; //variable initialization
+		for (Product p : productService.products()) { // for each product in the repository
+			totalInventoryAmount += p.getInventoryPrice(); //addition each inventory price
+		}
+		return totalInventoryAmount ;
+		}
+
 }
