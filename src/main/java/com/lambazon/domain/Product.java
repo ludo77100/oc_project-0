@@ -52,7 +52,7 @@ public class Product {
 	}
 
 	public void setQuantity(int quantity) {
-	    if (quantity < 0)
+	    if (quantity < 0) //quantity doesn't be negative, so this condition make it to 0 if negative
 	        this.quantity = 0;
 	    else
 			this.quantity = quantity;
