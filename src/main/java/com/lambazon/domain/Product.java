@@ -55,7 +55,7 @@ public class Product {
 	    if (quantity < 0)
 	        this.quantity = 0;
 	    else
-		this.quantity = quantity;
+			this.quantity = quantity;
 	}
 
 	public double getPrice() {
@@ -63,7 +63,12 @@ public class Product {
 	}
 
 	public void setPrice(double price) {
-		this.price = price;
+		if (price < 0)
+			this.price = 0;
+		else if (price > 1000)
+			this.price = 1000;
+		else
+			this.price = price;
 	}
 
 	public double getInventoryPrice() {
