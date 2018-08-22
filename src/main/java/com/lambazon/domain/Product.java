@@ -63,12 +63,12 @@ public class Product {
 	}
 
 	public void setPrice(double price) {
-		if (price < 0)
-			this.price = 0;
+		if (price < 0) //price cannot be negative or much higher than 1000
+			this.price = 0; //for negative, this.price take 0
 		else if (price > 1000)
-			this.price = 1000;
+			this.price = 1000; //for higher than 1000, this.price take 1000
 		else
-			this.price = price;
+			this.price = price; //and if it's between 0 <> 1000, no adjustement
 	}
 
 	public double getInventoryPrice() {
